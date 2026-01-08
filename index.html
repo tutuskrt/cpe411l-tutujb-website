@@ -7,148 +7,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-      <a href="#home" class="nav-link active">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#safety" class="nav-link">Safety Tips</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
 
     <!-- HOME SECTION -->
-    <section id="home" class="section active">
-      <header class="hero">
-        <h1>Community Flood Alert System</h1>
-        <p>Protecting our community through real-time flood monitoring and early warning</p>
-      </header>
-      
-      <div class="content">
-        <div class="intro-box">
-          <h2>Stay Safe, Stay Informed</h2>
-          <p>Our community flood monitoring system provides real-time water level data to help residents prepare and respond to potential flooding events. By monitoring conditions 24/7, we can alert the community when water levels rise to dangerous levels.</p>
-        </div>
-
-        <div class="current-status">
-          <h3>Current Water Level Status</h3>
-          <div class="status-card">
-            <div class="status-indicator normal">Normal</div>
-            <p class="status-text">Water levels are currently safe. No immediate danger to the community.</p>
-            <p class="status-reading">Current Reading: <strong>0 cm</strong></p>
-            <p class="last-update">Last Updated: January 8, 2026</p>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="nav-link active">Home</a>
+      </nav>
+      <section id="home" class="section active">
+        <header class="hero">
+          <h1>Community Flood Alert System</h1>
+          <p>Protecting our community through real-time flood monitoring and early warning</p>
+        </header>
+        <div class="content">
+          <div class="intro-box">
+            <h2>Stay Safe, Stay Informed</h2>
+            <p>Our community flood monitoring system provides real-time water level data to help residents prepare and respond to potential flooding events. By monitoring conditions 24/7, we can alert the community when water levels rise to dangerous levels.</p>
+          </div>
+          <div class="current-status">
+            <h3>Current Water Level Status</h3>
+            <div class="status-card">
+              <div class="status-indicator normal">Normal</div>
+              <p class="status-text">Water levels are currently safe. No immediate danger to the community.</p>
+              <p class="status-reading">Current Reading: <strong>0 cm</strong></p>
+              <p class="last-update">Last Updated: January 8, 2026</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-      <header class="page-header">
-        <h1>About Our System</h1>
-        <p>Learn how we protect our community</p>
-      </header>
-      
-      <div class="content">
-        <div class="about-content">
-          <h3>Our Mission</h3>
-          <p>The Community Flood Alert System was developed by CPE 411L students to provide early warning and real-time monitoring of flood conditions in our local area. Our goal is to keep residents safe and informed during severe weather events.</p>
-          
-          <h3>How It Works</h3>
-          <p>Our system uses sensors installed at strategic locations to measure water levels continuously. When water levels reach critical thresholds, automatic alerts are sent to community members, giving them time to prepare and evacuate if necessary.</p>
-          
-          <h3>Key Features</h3>
-          <ul>
-            <li>Real-time water level monitoring</li>
-            <li>Automatic alert notifications</li>
-            <li>Historical data tracking</li>
-            <li>Community-focused design</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- SAFETY TIPS SECTION -->
-    <section id="safety" class="section">
-      <header class="page-header">
-        <h1>Flood Safety Tips</h1>
-        <p>Essential information to keep you safe</p>
-      </header>
-      
-      <div class="content">
-        <div class="safety-tips">
-          <div class="tip-card">
-            <h3>Before a Flood</h3>
-            <ul>
-              <li>Know your evacuation routes</li>
-              <li>Prepare an emergency kit</li>
-              <li>Move valuables to higher ground</li>
-              <li>Stay informed about weather conditions</li>
-            </ul>
-          </div>
-
-          <div class="tip-card">
-            <h3>During a Flood</h3>
-            <ul>
-              <li>Move to higher ground immediately</li>
-              <li>Never walk or drive through floodwater</li>
-              <li>Stay away from power lines</li>
-              <li>Follow evacuation orders</li>
-            </ul>
-          </div>
-
-          <div class="tip-card">
-            <h3>After a Flood</h3>
-            <ul>
-              <li>Wait for authorities to declare it safe</li>
-              <li>Avoid floodwater (may be contaminated)</li>
-              <li>Document damage for insurance</li>
-              <li>Clean and disinfect everything</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-      <header class="page-header">
-        <h1>Contact Us</h1>
-        <p>Get in touch with our team</p>
-      </header>
-      
-      <div class="content">
-        <div class="contact-info">
-          <h3>Emergency Contacts</h3>
-          <p><strong>Emergency Hotline:</strong> 911</p>
-          <p><strong>Local Emergency Management:</strong> (555) 123-4567</p>
-          <p><strong>Community Alert Center:</strong> (555) 987-6543</p>
-          
-          <h3>System Information</h3>
-          <p><strong>Developed by:</strong> CPE 411L Students</p>
-          <p><strong>Institution:</strong> Local University</p>
-          <p><strong>Email:</strong> floodmonitor@example.com</p>
-          <p><strong>Version:</strong> 1.0.0</p>
-          <p><strong>Last Updated:</strong> January 2026</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <script>
-    // Simple navigation
-    const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('.section');
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        navLinks.forEach(l => l.classList.remove('active'));
-        sections.forEach(s => s.classList.remove('active'));
-        link.classList.add('active');
-        const targetId = link.getAttribute('href').substring(1);
-        document.getElementById(targetId).classList.add('active');
-      });
-    });
-  </script>
+   
 </body>
 </html>
