@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Flood Alert System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HOME SECTION -->
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#safety" class="nav-link">Safety Tips</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <section id="home" class="section active">
+        <header class="hero">
+          <h1>Community Flood Alert System</h1>
+          <p>Protecting our community through real-time flood monitoring and early warning</p>
+        </header>
+        <div class="content">
+          <div class="intro-box">
+            <h2>Stay Safe, Stay Informed</h2>
+            <p>Our community flood monitoring system provides real-time water level data to help residents prepare and respond to potential flooding events. By monitoring conditions 24/7, we can alert the community when water levels rise to dangerous levels.</p>
+          </div>
+          <a href="#about" class="btn">Learn More</a>
+          <div class="current-status">
+            <h3>Current Water Level Status</h3>
+            <div class="status-card">
+              <div class="status-indicator normal">Normal</div>
+              <p class="status-text">Water levels are currently safe. No immediate danger to the community.</p>
+              <p class="status-reading">Current Reading: <strong>0 cm</strong></p>
+              <p class="last-update">Last Updated: January 8, 2026</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
+        <header class="page-header">
+          <h1>About Our System</h1>
+          <p>Learn how we protect our community</p>
+        </header>
+        <div class="content">
+          <div class="about-content">
+            <h3>Our Mission</h3>
+            <p>To provide timely and accurate flood alerts to our community, empowering residents to make informed decisions and stay safe during extreme weather events.</p>
+            <ul>
+              <li>Real-time water level monitoring</li>
+              <li>Automated alert notifications</li>
+              <li>Community-focused safety resources</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAFETY TIPS SECTION -->
+      <section id="safety" class="section">
+        <header class="page-header">
+          <h1>Flood Safety Tips</h1>
+          <p>Essential information to keep you safe</p>
+        </header>
+        <div class="content">
+          <div class="safety-tips">
+            <div class="tip-card">
+              <h3>Before a Flood</h3>
+              <ul>
+                <li>Know your evacuation routes and emergency contacts</li>
+                <li>Prepare an emergency kit with essentials</li>
+                <li>Move valuables and important documents to higher ground</li>
+                <li>Stay informed about weather conditions and alerts</li>
+                <li>Fill bathtubs and containers with clean water</li>
+              </ul>
+            </div>
+
+            <div class="tip-card">
+              <h3>During a Flood</h3>
+              <ul>
+                <li>Move to higher ground immediately</li>
+                <li>Never walk or drive through floodwater</li>
+                <li>Stay away from power lines and electrical equipment</li>
+                <li>Follow evacuation orders from authorities</li>
+                <li>Keep listening to emergency broadcasts</li>
+              </ul>
+            </div>
+
+            <div class="tip-card">
+              <h3>After a Flood</h3>
+              <ul>
+                <li>Wait for authorities to declare it safe to return</li>
+                <li>Avoid floodwater as it may be contaminated</li>
+                <li>Document damage with photos for insurance</li>
+                <li>Clean and disinfect everything that got wet</li>
+                <li>Watch for structural damage before entering buildings</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="safety-info-box">
+            <h3>Emergency Numbers</h3>
+            <p><strong>Emergency Hotline:</strong> 911</p>
+            <p><strong>Local Disaster Management:</strong> (555) 123-4567</p>
+            <p><strong>Red Cross:</strong> (555) 987-6543</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="section">
+        <header class="page-header">
+          <h1>Contact Us</h1>
+          <p>Emergency contacts and support</p>
+        </header>
+        <div class="content">
+
+
+
+
+
+          
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Simple navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          navLinks.forEach(l => l.classList.remove('active'));
+          sections.forEach(s => s.classList.remove('active'));
+          link.classList.add('active');
+          const targetId = link.getAttribute('href').substring(1);
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+    </script>
+</body>
+</html>
