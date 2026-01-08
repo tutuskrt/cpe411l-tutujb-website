@@ -12,6 +12,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
       </nav>
       <section id="home" class="section active">
         <header class="hero">
@@ -23,6 +24,7 @@
             <h2>Stay Safe, Stay Informed</h2>
             <p>Our community flood monitoring system provides real-time water level data to help residents prepare and respond to potential flooding events. By monitoring conditions 24/7, we can alert the community when water levels rise to dangerous levels.</p>
           </div>
+          <a href="#about" class="btn">Learn More</a>
           <div class="current-status">
             <h3>Current Water Level Status</h3>
             <div class="status-card">
@@ -33,6 +35,43 @@
             </div>
           </div>
         </div>
-   
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="section">
+        <header class="page-header">
+          <h1>About Our System</h1>
+          <p>Learn how we protect our community</p>
+        </header>
+        <div class="content">
+          <div class="about-content">
+            <h3>Our Mission</h3>
+            <p>To provide timely and accurate flood alerts to our community, empowering residents to make informed decisions and stay safe during extreme weather events.</p>
+            <ul>
+              <li>Real-time water level monitoring</li>
+              <li>Automated alert notifications</li>
+              <li>Community-focused safety resources</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      // Simple navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.section');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          navLinks.forEach(l => l.classList.remove('active'));
+          sections.forEach(s => s.classList.remove('active'));
+          link.classList.add('active');
+          const targetId = link.getAttribute('href').substring(1);
+          document.getElementById(targetId).classList.add('active');
+        });
+      });
+    </script>
 </body>
 </html>
